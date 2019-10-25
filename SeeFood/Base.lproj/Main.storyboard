@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sC0-Gf-0M3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0Wi-Da-BNW">
+            <objects>
+                <navigationController id="sC0-Gf-0M3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="56d-YH-hhF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7HL-Uk-1eL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ec-g0-MBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="95"/>
+        </scene>
+        <!--Prediction Model-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeeFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sKH-42-N9M">
+                                <rect key="frame" x="0.0" y="95" width="414" height="39"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="7v8-kN-jO2"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="spa-sy-6ta">
+                                <rect key="frame" x="0.0" y="153" width="414" height="709"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sKH-42-N9M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OW5-UC-JSH"/>
+                            <constraint firstItem="spa-sy-6ta" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Pa2-ar-p1S"/>
+                            <constraint firstItem="spa-sy-6ta" firstAttribute="trailing" secondItem="sKH-42-N9M" secondAttribute="trailing" id="RRz-rk-eca"/>
+                            <constraint firstItem="spa-sy-6ta" firstAttribute="leading" secondItem="sKH-42-N9M" secondAttribute="leading" id="dgt-rf-ZiR"/>
+                            <constraint firstItem="sKH-42-N9M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdE-DV-GQ5"/>
+                            <constraint firstItem="spa-sy-6ta" firstAttribute="top" secondItem="sKH-42-N9M" secondAttribute="bottom" constant="19" id="rKU-jg-LZE"/>
+                            <constraint firstItem="sKH-42-N9M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="wSs-F1-abq"/>
+                            <constraint firstItem="sKH-42-N9M" firstAttribute="width" secondItem="spa-sy-6ta" secondAttribute="width" id="zyS-be-FlN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Prediction Model" id="Onk-OX-lPl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="nyD-g0-UGL">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="ynA-zg-3kV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="spa-sy-6ta" id="x0K-B9-l1K"/>
+                        <outlet property="textView" destination="sKH-42-N9M" id="Sa3-xc-PAK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="93.75"/>
+        </scene>
+    </scenes>
+</document>
